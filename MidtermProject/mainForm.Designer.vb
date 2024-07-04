@@ -28,22 +28,6 @@ Partial Class mainForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Panel3 = New Panel()
         Panel6 = New Panel()
-        homePanel = New Panel()
-        Label32 = New Label()
-        panelLogin = New Panel()
-        lblHover = New Label()
-        Label13 = New Label()
-        Label31 = New Label()
-        btnRegister = New BorderlessButton()
-        Label1 = New Label()
-        btnLogin = New BorderlessButton()
-        lblHover1 = New Label()
-        Label44 = New Label()
-        storePanel = New Panel()
-        Label30 = New Label()
-        txtSearchproduct = New TextBox()
-        Label2 = New Label()
-        FlowLayoutPanel1 = New FlowLayoutPanel()
         panelCart = New Panel()
         Label24 = New Label()
         DataGridView1 = New DataGridView()
@@ -132,7 +116,24 @@ Partial Class mainForm
         Column12 = New DataGridViewTextBoxColumn()
         Column13 = New DataGridViewTextBoxColumn()
         Column14 = New DataGridViewTextBoxColumn()
+        homePanel = New Panel()
+        Label32 = New Label()
+        panelLogin = New Panel()
+        lblHover = New Label()
+        Label13 = New Label()
+        Label31 = New Label()
+        btnRegister = New BorderlessButton()
+        Label1 = New Label()
+        btnLogin = New BorderlessButton()
+        lblHover1 = New Label()
+        Label44 = New Label()
+        storePanel = New Panel()
+        Label30 = New Label()
+        txtSearchproduct = New TextBox()
+        Label2 = New Label()
+        FlowLayoutPanel1 = New FlowLayoutPanel()
         Panel4 = New Panel()
+        txtSign = New Label()
         btnHistory = New BorderlessButton()
         RoundedPictureBox1 = New RoundedPictureBox()
         btnCart = New BorderlessButton()
@@ -141,12 +142,8 @@ Partial Class mainForm
         btnSettings = New BorderlessButton()
         btnHome = New BorderlessButton()
         ToolTip1 = New ToolTip(components)
-        txtSign = New Label()
         Panel3.SuspendLayout()
         Panel6.SuspendLayout()
-        homePanel.SuspendLayout()
-        panelLogin.SuspendLayout()
-        storePanel.SuspendLayout()
         panelCart.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         panelSettings.SuspendLayout()
@@ -164,6 +161,9 @@ Partial Class mainForm
         panelAbout.SuspendLayout()
         historyPanel.SuspendLayout()
         CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        homePanel.SuspendLayout()
+        panelLogin.SuspendLayout()
+        storePanel.SuspendLayout()
         Panel4.SuspendLayout()
         CType(RoundedPictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -192,198 +192,6 @@ Partial Class mainForm
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(1550, 811)
         Panel6.TabIndex = 37
-        ' 
-        ' homePanel
-        ' 
-        homePanel.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
-        homePanel.BackgroundImageLayout = ImageLayout.Zoom
-        homePanel.Controls.Add(Label32)
-        homePanel.Controls.Add(panelLogin)
-        homePanel.Controls.Add(lblHover1)
-        homePanel.Controls.Add(Label44)
-        homePanel.Dock = DockStyle.Fill
-        homePanel.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        homePanel.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        homePanel.Location = New Point(0, 0)
-        homePanel.Margin = New Padding(3, 2, 3, 2)
-        homePanel.Name = "homePanel"
-        homePanel.Size = New Size(1550, 811)
-        homePanel.TabIndex = 15
-        ' 
-        ' Label32
-        ' 
-        Label32.AutoSize = True
-        Label32.Font = New Font("Segoe UI", 9.75F)
-        Label32.Location = New Point(662, 287)
-        Label32.Name = "Label32"
-        Label32.Size = New Size(237, 17)
-        Label32.TabIndex = 38
-        Label32.Text = "(Hover to translate. Unhover to default)"
-        ' 
-        ' panelLogin
-        ' 
-        panelLogin.Controls.Add(lblHover)
-        panelLogin.Controls.Add(Label13)
-        panelLogin.Controls.Add(Label31)
-        panelLogin.Controls.Add(btnRegister)
-        panelLogin.Controls.Add(Label1)
-        panelLogin.Controls.Add(btnLogin)
-        panelLogin.Location = New Point(546, 426)
-        panelLogin.Name = "panelLogin"
-        panelLogin.Size = New Size(496, 176)
-        panelLogin.TabIndex = 37
-        ' 
-        ' lblHover
-        ' 
-        lblHover.Font = New Font("Segoe UI", 11.25F)
-        lblHover.Location = New Point(3, 27)
-        lblHover.Name = "lblHover"
-        lblHover.Size = New Size(490, 24)
-        lblHover.TabIndex = 38
-        lblHover.Text = "Sepertinya Anda belum masuk? (Hover to translate)"
-        lblHover.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label13
-        ' 
-        Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(305, 143)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(122, 17)
-        Label13.TabIndex = 38
-        Label13.Text = "Create new account"
-        ' 
-        ' Label31
-        ' 
-        Label31.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
-        Label31.AutoSize = True
-        Label31.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label31.Location = New Point(117, 143)
-        Label31.Name = "Label31"
-        Label31.Size = New Size(40, 17)
-        Label31.TabIndex = 37
-        Label31.Text = "Login"
-        ' 
-        ' btnRegister
-        ' 
-        btnRegister.Anchor = AnchorStyles.Top
-        btnRegister.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
-        btnRegister.FlatStyle = FlatStyle.Flat
-        btnRegister.Image = My.Resources.Resources.icons8_register_351
-        btnRegister.Location = New Point(288, 70)
-        btnRegister.Margin = New Padding(3, 2, 3, 2)
-        btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(154, 57)
-        btnRegister.TabIndex = 36
-        btnRegister.UseVisualStyleBackColor = False
-        ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
-        Label1.Location = New Point(226, 89)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(49, 19)
-        Label1.TabIndex = 33
-        Label1.Text = "- OR -"
-        ' 
-        ' btnLogin
-        ' 
-        btnLogin.Anchor = AnchorStyles.Top
-        btnLogin.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
-        btnLogin.FlatStyle = FlatStyle.Flat
-        btnLogin.Image = My.Resources.Resources.icons8_login_30
-        btnLogin.Location = New Point(61, 70)
-        btnLogin.Margin = New Padding(3, 2, 3, 2)
-        btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(154, 57)
-        btnLogin.TabIndex = 35
-        btnLogin.UseVisualStyleBackColor = False
-        ' 
-        ' lblHover1
-        ' 
-        lblHover1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
-        lblHover1.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        lblHover1.Location = New Point(513, 245)
-        lblHover1.Name = "lblHover1"
-        lblHover1.Size = New Size(550, 25)
-        lblHover1.TabIndex = 32
-        lblHover1.Text = "Jika Anda tidak membeli, Anda jelek. Ya."
-        lblHover1.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label44
-        ' 
-        Label44.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
-        Label44.AutoSize = True
-        Label44.BackColor = Color.Transparent
-        Label44.Font = New Font("Segoe UI Semibold", 30F, FontStyle.Bold)
-        Label44.ForeColor = SystemColors.Control
-        Label44.Location = New Point(622, 166)
-        Label44.Name = "Label44"
-        Label44.Size = New Size(323, 54)
-        Label44.TabIndex = 30
-        Label44.Text = "Welcome to MP!"
-        ' 
-        ' storePanel
-        ' 
-        storePanel.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
-        storePanel.Controls.Add(Label30)
-        storePanel.Controls.Add(txtSearchproduct)
-        storePanel.Controls.Add(Label2)
-        storePanel.Controls.Add(FlowLayoutPanel1)
-        storePanel.Dock = DockStyle.Fill
-        storePanel.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        storePanel.Location = New Point(0, 0)
-        storePanel.Margin = New Padding(3, 2, 3, 2)
-        storePanel.Name = "storePanel"
-        storePanel.Size = New Size(1550, 811)
-        storePanel.TabIndex = 14
-        ' 
-        ' Label30
-        ' 
-        Label30.AutoSize = True
-        Label30.Location = New Point(70, 786)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(47, 15)
-        Label30.TabIndex = 0
-        Label30.Text = "Label30"
-        ' 
-        ' txtSearchproduct
-        ' 
-        txtSearchproduct.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        txtSearchproduct.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
-        txtSearchproduct.BorderStyle = BorderStyle.FixedSingle
-        txtSearchproduct.Font = New Font("Segoe UI", 10.3F)
-        txtSearchproduct.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        txtSearchproduct.Location = New Point(25, 20)
-        txtSearchproduct.Margin = New Padding(3, 2, 3, 2)
-        txtSearchproduct.Multiline = True
-        txtSearchproduct.Name = "txtSearchproduct"
-        txtSearchproduct.PlaceholderText = "Search for product name or product model"
-        txtSearchproduct.Size = New Size(1483, 28)
-        txtSearchproduct.TabIndex = 33
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(25, 776)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(45, 15)
-        Label2.TabIndex = 32
-        Label2.Text = "Status :"
-        ' 
-        ' FlowLayoutPanel1
-        ' 
-        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.Location = New Point(6, 59)
-        FlowLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
-        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(1532, 697)
-        FlowLayoutPanel1.TabIndex = 31
         ' 
         ' panelCart
         ' 
@@ -1336,6 +1144,198 @@ Partial Class mainForm
         Column14.ReadOnly = True
         Column14.Width = 140
         ' 
+        ' homePanel
+        ' 
+        homePanel.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
+        homePanel.BackgroundImageLayout = ImageLayout.Zoom
+        homePanel.Controls.Add(Label32)
+        homePanel.Controls.Add(panelLogin)
+        homePanel.Controls.Add(lblHover1)
+        homePanel.Controls.Add(Label44)
+        homePanel.Dock = DockStyle.Fill
+        homePanel.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        homePanel.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
+        homePanel.Location = New Point(0, 0)
+        homePanel.Margin = New Padding(3, 2, 3, 2)
+        homePanel.Name = "homePanel"
+        homePanel.Size = New Size(1550, 811)
+        homePanel.TabIndex = 15
+        ' 
+        ' Label32
+        ' 
+        Label32.AutoSize = True
+        Label32.Font = New Font("Segoe UI", 9.75F)
+        Label32.Location = New Point(662, 287)
+        Label32.Name = "Label32"
+        Label32.Size = New Size(237, 17)
+        Label32.TabIndex = 38
+        Label32.Text = "(Hover to translate. Unhover to default)"
+        ' 
+        ' panelLogin
+        ' 
+        panelLogin.Controls.Add(lblHover)
+        panelLogin.Controls.Add(Label13)
+        panelLogin.Controls.Add(Label31)
+        panelLogin.Controls.Add(btnRegister)
+        panelLogin.Controls.Add(Label1)
+        panelLogin.Controls.Add(btnLogin)
+        panelLogin.Location = New Point(546, 426)
+        panelLogin.Name = "panelLogin"
+        panelLogin.Size = New Size(496, 176)
+        panelLogin.TabIndex = 37
+        ' 
+        ' lblHover
+        ' 
+        lblHover.Font = New Font("Segoe UI", 11.25F)
+        lblHover.Location = New Point(3, 27)
+        lblHover.Name = "lblHover"
+        lblHover.Size = New Size(490, 24)
+        lblHover.TabIndex = 38
+        lblHover.Text = "Sepertinya Anda belum masuk? (Hover to translate)"
+        lblHover.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label13
+        ' 
+        Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.Location = New Point(305, 143)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(122, 17)
+        Label13.TabIndex = 38
+        Label13.Text = "Create new account"
+        ' 
+        ' Label31
+        ' 
+        Label31.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label31.AutoSize = True
+        Label31.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label31.Location = New Point(117, 143)
+        Label31.Name = "Label31"
+        Label31.Size = New Size(40, 17)
+        Label31.TabIndex = 37
+        Label31.Text = "Login"
+        ' 
+        ' btnRegister
+        ' 
+        btnRegister.Anchor = AnchorStyles.Top
+        btnRegister.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
+        btnRegister.FlatStyle = FlatStyle.Flat
+        btnRegister.Image = My.Resources.Resources.icons8_register_351
+        btnRegister.Location = New Point(288, 70)
+        btnRegister.Margin = New Padding(3, 2, 3, 2)
+        btnRegister.Name = "btnRegister"
+        btnRegister.Size = New Size(154, 57)
+        btnRegister.TabIndex = 36
+        btnRegister.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
+        Label1.Location = New Point(226, 89)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(49, 19)
+        Label1.TabIndex = 33
+        Label1.Text = "- OR -"
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.Anchor = AnchorStyles.Top
+        btnLogin.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
+        btnLogin.FlatStyle = FlatStyle.Flat
+        btnLogin.Image = My.Resources.Resources.icons8_login_30
+        btnLogin.Location = New Point(61, 70)
+        btnLogin.Margin = New Padding(3, 2, 3, 2)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(154, 57)
+        btnLogin.TabIndex = 35
+        btnLogin.UseVisualStyleBackColor = False
+        ' 
+        ' lblHover1
+        ' 
+        lblHover1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        lblHover1.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        lblHover1.Location = New Point(513, 245)
+        lblHover1.Name = "lblHover1"
+        lblHover1.Size = New Size(550, 25)
+        lblHover1.TabIndex = 32
+        lblHover1.Text = "Jika Anda tidak membeli, Anda jelek. Ya."
+        lblHover1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label44
+        ' 
+        Label44.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label44.AutoSize = True
+        Label44.BackColor = Color.Transparent
+        Label44.Font = New Font("Segoe UI Semibold", 30F, FontStyle.Bold)
+        Label44.ForeColor = SystemColors.Control
+        Label44.Location = New Point(622, 166)
+        Label44.Name = "Label44"
+        Label44.Size = New Size(323, 54)
+        Label44.TabIndex = 30
+        Label44.Text = "Welcome to MP!"
+        ' 
+        ' storePanel
+        ' 
+        storePanel.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
+        storePanel.Controls.Add(Label30)
+        storePanel.Controls.Add(txtSearchproduct)
+        storePanel.Controls.Add(Label2)
+        storePanel.Controls.Add(FlowLayoutPanel1)
+        storePanel.Dock = DockStyle.Fill
+        storePanel.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
+        storePanel.Location = New Point(0, 0)
+        storePanel.Margin = New Padding(3, 2, 3, 2)
+        storePanel.Name = "storePanel"
+        storePanel.Size = New Size(1550, 811)
+        storePanel.TabIndex = 14
+        ' 
+        ' Label30
+        ' 
+        Label30.AutoSize = True
+        Label30.Location = New Point(70, 786)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(47, 15)
+        Label30.TabIndex = 0
+        Label30.Text = "Label30"
+        ' 
+        ' txtSearchproduct
+        ' 
+        txtSearchproduct.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtSearchproduct.BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
+        txtSearchproduct.BorderStyle = BorderStyle.FixedSingle
+        txtSearchproduct.Font = New Font("Segoe UI", 10.3F)
+        txtSearchproduct.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
+        txtSearchproduct.Location = New Point(25, 20)
+        txtSearchproduct.Margin = New Padding(3, 2, 3, 2)
+        txtSearchproduct.Multiline = True
+        txtSearchproduct.Name = "txtSearchproduct"
+        txtSearchproduct.PlaceholderText = "Search for product name or product model"
+        txtSearchproduct.Size = New Size(1483, 28)
+        txtSearchproduct.TabIndex = 33
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(25, 776)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(45, 15)
+        Label2.TabIndex = 32
+        Label2.Text = "Status :"
+        ' 
+        ' FlowLayoutPanel1
+        ' 
+        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        FlowLayoutPanel1.Location = New Point(6, 59)
+        FlowLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        FlowLayoutPanel1.Size = New Size(1532, 697)
+        FlowLayoutPanel1.TabIndex = 31
+        ' 
         ' Panel4
         ' 
         Panel4.BackColor = Color.FromArgb(CByte(47), CByte(43), CByte(44))
@@ -1354,6 +1354,14 @@ Partial Class mainForm
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(1550, 70)
         Panel4.TabIndex = 31
+        ' 
+        ' txtSign
+        ' 
+        txtSign.AutoSize = True
+        txtSign.Location = New Point(164, 28)
+        txtSign.Name = "txtSign"
+        txtSign.Size = New Size(0, 15)
+        txtSign.TabIndex = 38
         ' 
         ' btnHistory
         ' 
@@ -1445,14 +1453,6 @@ Partial Class mainForm
         btnHome.TabIndex = 33
         btnHome.UseVisualStyleBackColor = False
         ' 
-        ' txtSign
-        ' 
-        txtSign.AutoSize = True
-        txtSign.Location = New Point(164, 28)
-        txtSign.Name = "txtSign"
-        txtSign.Size = New Size(0, 15)
-        txtSign.TabIndex = 38
-        ' 
         ' mainForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1464,12 +1464,6 @@ Partial Class mainForm
         StartPosition = FormStartPosition.CenterScreen
         Panel3.ResumeLayout(False)
         Panel6.ResumeLayout(False)
-        homePanel.ResumeLayout(False)
-        homePanel.PerformLayout()
-        panelLogin.ResumeLayout(False)
-        panelLogin.PerformLayout()
-        storePanel.ResumeLayout(False)
-        storePanel.PerformLayout()
         panelCart.ResumeLayout(False)
         panelCart.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
@@ -1496,6 +1490,12 @@ Partial Class mainForm
         historyPanel.ResumeLayout(False)
         historyPanel.PerformLayout()
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        homePanel.ResumeLayout(False)
+        homePanel.PerformLayout()
+        panelLogin.ResumeLayout(False)
+        panelLogin.PerformLayout()
+        storePanel.ResumeLayout(False)
+        storePanel.PerformLayout()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         CType(RoundedPictureBox1, ComponentModel.ISupportInitialize).EndInit()
