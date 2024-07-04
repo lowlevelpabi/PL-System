@@ -8,25 +8,55 @@
 This update include modification of functionalities across the project.
 
 
-## Update changelog
+## Update changelog as of 07/04/2024
 
 ### mainForm (Home)
 mainForm Changes
 
-- Re-work in UI
-- Added functionalities for client order history
-- Added functionalities for client cart
-- Some changes in session handler
+- [x] Re-work of UI Design
+- [x] Added new selection for login and registration
+- [x] Translation of Indonesian word in homepage through Mouse Hover
+
+### mainForm (Products)
+
+- [x] Product panel box border color changed
+- [x] Added button inside the panel to easily interact with it
+- [x] Fixed bug where account selection is not showing when there is no user logged-in
+
+### mainForm (Cart)
+
+- [x] Changed and fixed the proper sequence of columns in datagridview
+- [x] Fixed the backend of the previous changes
+
+### mainForm (Settings)
+
+- Added new feature 'Setup shipping details'
+> [x] This feature allow the user to setup once their shipping detail and never input it again and again when buying.
+
+- Fixed all text fields abnormal functionalities
+> [x] Throughout the making and enahcement, the functionalities of the text fields is behaving in not normal or proper condition. This issues are already fixed now.
+
 
 ### Form1 (Login)
 
-- Re-work in UI Design
-- Code changes in button handler on 'form1Functions'
+- [x] Re-work in UI Design
+- [x] Code changes in button handler on 'form1Functions'
 
 ### Form2 (Register)
 
-- Re-work in UI Design
+- [x] Re-work in UI Design
 
 ### Checkout Items (Check out Form)
 
-- Some changes in functionalities.
+- [x] Added shipping details of the client
+- [x] Removed some unnecessary item/s in data grid
+- [x] Code functionalities alignment with the new feature
+- [x] Fixed code where computation of total cost is incorrect
+
+### Assets
+
+> Added new assets such as Images and backup class files for future enhancement.
+
+
+> [!IMPORTANT]
+> These changelog is almost the final changelog and the almost the final update. Continue the project on your own after.
