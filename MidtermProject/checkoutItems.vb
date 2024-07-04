@@ -18,8 +18,6 @@ Public Class checkoutItems
 
     Public cs As String = "Server=localhost;Port=3306;Database=alterdb;Uid=root;Pwd=;"
 
-    Public targetForm As New mainForm()
-
     'Draggable form propertys
     Private Property MoveForm As Boolean
     Private Property MoveForm_MousePosition As Point
@@ -148,7 +146,7 @@ Public Class checkoutItems
 
                                     For Each row In DataGridView1.Rows
 
-                                        Dim productId As Integer = CInt(row.Cells("Column2").Value)
+                                        Dim productId As Integer = CInt(row.Cells("Column3").Value)
 
                                         Dim quantityToDeduct As Integer = CInt(row.Cells("Column5").Value)
 
