@@ -56,9 +56,9 @@ Partial Class checkoutItems
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        Label1.Location = New Point(750, 390)
+        Label1.Location = New Point(750, 442)
         Label1.Name = "Label1"
-        Label1.Size = New Size(338, 15)
+        Label1.Size = New Size(400, 19)
         Label1.TabIndex = 1
         Label1.Text = "Please double check your items before proceeding transaction."
         ' 
@@ -67,9 +67,9 @@ Partial Class checkoutItems
         Button1.BackColor = Color.FromArgb(CByte(30), CByte(28), CByte(26))
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.FromArgb(CByte(230), CByte(232), CByte(236))
-        Button1.Location = New Point(1280, 383)
+        Button1.Location = New Point(1280, 434)
         Button1.Name = "Button1"
-        Button1.Size = New Size(118, 29)
+        Button1.Size = New Size(118, 33)
         Button1.TabIndex = 2
         Button1.Text = "Proceed"
         Button1.UseVisualStyleBackColor = False
@@ -78,9 +78,9 @@ Partial Class checkoutItems
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(302, 390)
+        Label2.Location = New Point(302, 442)
         Label2.Name = "Label2"
-        Label2.Size = New Size(75, 15)
+        Label2.Size = New Size(92, 19)
         Label2.TabIndex = 3
         Label2.Text = "Total Cost : ₱"
         ' 
@@ -89,9 +89,9 @@ Partial Class checkoutItems
         Button2.BackColor = Color.FromArgb(CByte(30), CByte(28), CByte(26))
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = Color.FromArgb(CByte(230), CByte(232), CByte(236))
-        Button2.Location = New Point(1156, 383)
+        Button2.Location = New Point(1156, 434)
         Button2.Name = "Button2"
-        Button2.Size = New Size(118, 29)
+        Button2.Size = New Size(118, 33)
         Button2.TabIndex = 6
         Button2.Text = "Return to Store"
         Button2.UseVisualStyleBackColor = False
@@ -104,20 +104,22 @@ Partial Class checkoutItems
         ' 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
+        DataGridView1.ColumnHeadersHeight = 25
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6})
-        DataGridView1.Location = New Point(302, 18)
+        DataGridView1.Location = New Point(302, 20)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersVisible = False
-        DataGridView1.Size = New Size(1112, 346)
+        DataGridView1.RowHeadersWidth = 45
+        DataGridView1.Size = New Size(1112, 392)
         DataGridView1.TabIndex = 39
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(378, 392)
+        Label5.Location = New Point(378, 444)
         Label5.Name = "Label5"
-        Label5.Size = New Size(41, 15)
+        Label5.Size = New Size(46, 17)
         Label5.TabIndex = 37
         Label5.Text = "Label5"
         ' 
@@ -133,18 +135,18 @@ Partial Class checkoutItems
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(Label3)
-        GroupBox1.Location = New Point(20, 12)
+        GroupBox1.Location = New Point(20, 14)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(260, 400)
+        GroupBox1.Size = New Size(260, 453)
         GroupBox1.TabIndex = 38
         GroupBox1.TabStop = False
         ' 
         ' targetLabel
         ' 
         targetLabel.AutoSize = True
-        targetLabel.Location = New Point(6, 378)
+        targetLabel.Location = New Point(6, 428)
         targetLabel.Name = "targetLabel"
-        targetLabel.Size = New Size(28, 15)
+        targetLabel.Size = New Size(32, 17)
         targetLabel.TabIndex = 48
         targetLabel.Text = "<?>"
         ' 
@@ -154,9 +156,9 @@ Partial Class checkoutItems
         txtEmail.BorderStyle = BorderStyle.FixedSingle
         txtEmail.Font = New Font("Segoe UI Semilight", 10F)
         txtEmail.ForeColor = SystemColors.Control
-        txtEmail.Location = New Point(27, 327)
+        txtEmail.Location = New Point(27, 371)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(194, 25)
+        txtEmail.Size = New Size(194, 27)
         txtEmail.TabIndex = 47
         ' 
         ' txtContact
@@ -165,9 +167,9 @@ Partial Class checkoutItems
         txtContact.BorderStyle = BorderStyle.FixedSingle
         txtContact.Font = New Font("Segoe UI Semilight", 10F)
         txtContact.ForeColor = SystemColors.Control
-        txtContact.Location = New Point(27, 250)
+        txtContact.Location = New Point(27, 283)
         txtContact.Name = "txtContact"
-        txtContact.Size = New Size(194, 25)
+        txtContact.Size = New Size(194, 27)
         txtContact.TabIndex = 46
         ' 
         ' txtAddress
@@ -176,9 +178,9 @@ Partial Class checkoutItems
         txtAddress.BorderStyle = BorderStyle.FixedSingle
         txtAddress.Font = New Font("Segoe UI Semilight", 10F)
         txtAddress.ForeColor = SystemColors.Control
-        txtAddress.Location = New Point(27, 178)
+        txtAddress.Location = New Point(27, 202)
         txtAddress.Name = "txtAddress"
-        txtAddress.Size = New Size(194, 25)
+        txtAddress.Size = New Size(194, 27)
         txtAddress.TabIndex = 45
         ' 
         ' txtName
@@ -187,9 +189,9 @@ Partial Class checkoutItems
         txtName.BorderStyle = BorderStyle.FixedSingle
         txtName.Font = New Font("Segoe UI Semilight", 10F)
         txtName.ForeColor = SystemColors.Control
-        txtName.Location = New Point(27, 94)
+        txtName.Location = New Point(27, 107)
         txtName.Name = "txtName"
-        txtName.Size = New Size(194, 25)
+        txtName.Size = New Size(194, 27)
         txtName.TabIndex = 44
         ' 
         ' Label8
@@ -197,89 +199,101 @@ Partial Class checkoutItems
         Label8.AutoSize = True
         Label8.Location = New Point(4, 1)
         Label8.Name = "Label8"
-        Label8.Size = New Size(81, 15)
+        Label8.Size = New Size(90, 17)
         Label8.TabIndex = 43
         Label8.Text = "Delivery detail"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(27, 294)
+        Label7.Location = New Point(27, 333)
         Label7.Name = "Label7"
-        Label7.Size = New Size(39, 15)
+        Label7.Size = New Size(42, 17)
         Label7.TabIndex = 41
         Label7.Text = "Email:"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(27, 218)
+        Label6.Location = New Point(27, 247)
         Label6.Name = "Label6"
-        Label6.Size = New Size(74, 15)
+        Label6.Size = New Size(80, 17)
         Label6.TabIndex = 39
         Label6.Text = "Contact No.:"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(27, 60)
+        Label4.Location = New Point(27, 68)
         Label4.Name = "Label4"
-        Label4.Size = New Size(42, 15)
+        Label4.Size = New Size(46, 17)
         Label4.TabIndex = 2
         Label4.Text = "Name:"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(27, 141)
+        Label3.Location = New Point(27, 160)
         Label3.Name = "Label3"
-        Label3.Size = New Size(49, 15)
+        Label3.Size = New Size(56, 17)
         Label3.TabIndex = 0
         Label3.Text = "Address"
         ' 
         ' Column1
         ' 
         Column1.HeaderText = "#"
+        Column1.MinimumWidth = 6
         Column1.Name = "Column1"
         Column1.ReadOnly = True
         Column1.Visible = False
+        Column1.Width = 110
         ' 
         ' Column2
         ' 
         Column2.HeaderText = "Product Name"
+        Column2.MinimumWidth = 6
         Column2.Name = "Column2"
         Column2.ReadOnly = True
+        Column2.Width = 350
         ' 
         ' Column3
         ' 
         Column3.HeaderText = "Product Code"
+        Column3.MinimumWidth = 6
         Column3.Name = "Column3"
         Column3.ReadOnly = True
+        Column3.Width = 170
         ' 
         ' Column4
         ' 
         Column4.HeaderText = "Product Price"
+        Column4.MinimumWidth = 6
         Column4.Name = "Column4"
         Column4.ReadOnly = True
+        Column4.Width = 120
         ' 
         ' Column5
         ' 
         Column5.HeaderText = "Quantity"
+        Column5.MinimumWidth = 6
         Column5.Name = "Column5"
         Column5.ReadOnly = True
+        Column5.Width = 120
         ' 
         ' Column6
         ' 
         Column6.HeaderText = "Item subtotal"
+        Column6.MinimumWidth = 6
         Column6.Name = "Column6"
         Column6.ReadOnly = True
+        Column6.Width = 200
         ' 
         ' checkoutItems
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
-        ClientSize = New Size(1436, 429)
+        ClientSize = New Size(1436, 486)
         Controls.Add(GroupBox1)
         Controls.Add(Label5)
         Controls.Add(Label1)

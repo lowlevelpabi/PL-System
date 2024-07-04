@@ -192,23 +192,15 @@ Public Class checkoutItems
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.MouseClick
 
         Dim response As String
 
-        response = MsgBox("Do you want to return to merchant?", MsgBoxStyle.Question + vbYesNo)
+        response = MsgBox("Do you want to return in merchant?", MsgBoxStyle.Question + vbYesNo, "Check out")
 
         If response = vbYes Then
 
-            mainForm.storePanel.BringToFront()
-
-            mainForm.btnStore.BackColor = Color.FromArgb(67, 61, 63)
-
-            mainForm.btnHome.BackColor = Color.FromArgb(30, 28, 26)
-
-            mainForm.btnAbout.BackColor = Color.FromArgb(30, 28, 26)
-
-            Me.Close()
+            Close()
 
         End If
 

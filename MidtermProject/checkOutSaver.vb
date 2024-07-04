@@ -182,7 +182,7 @@ Public Class checkOutSaver
 
                         If rdr.Read() Then
 
-                            checkoutItems.txtName.Text = rdr("firstname")
+                            checkoutItems.txtName.Text = rdr("fname")
 
                             checkoutItems.txtAddress.Text = rdr("address")
 
