@@ -19,6 +19,7 @@ mainForm Changes
 - [x] Re-work of UI Design
 - [x] Added new selection for login and registration
 - [x] Translation of Indonesian word in homepage through Mouse Hover
+- [x] Fixed some known bug
 
 ### mainForm (Products)
 
@@ -42,8 +43,8 @@ mainForm Changes
 
 ### Form1 (Login)
 
-- [x] Re-work in UI Design
-- [x] Code changes in button handler on 'form1Functions'
+- [x] Modification of code functions in text fields and button.
+> This modification applied in creating a new Form instead of calling directly the target form, not casting another form.
 
 ### Form2 (Register)
 
@@ -55,6 +56,7 @@ mainForm Changes
 - [x] Removed some unnecessary item/s in data grid
 - [x] Code functionalities alignment with the new feature
 - [x] Fixed code where computation of total cost is incorrect
+- [x] Fixed bug in 'Return to merchant' button where it popping up two message box
 
 ### Assets
 
