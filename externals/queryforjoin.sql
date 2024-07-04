@@ -1,0 +1,1 @@
+SELECT users.username, orders.order_id, orders.item_code, orders.item_name FROM altertable AS users JOIN alter_orders AS orders ON users.id = orders.id WHERE users.id = orders.id;

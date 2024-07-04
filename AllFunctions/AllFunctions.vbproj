@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>AllFunctions</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MySqlConnector">
+      <HintPath>..\MidtermProject\bin\Debug\net8.0-windows\MySqlConnector.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
