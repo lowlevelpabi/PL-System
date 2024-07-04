@@ -64,9 +64,9 @@ Public Class checkOutSaver
 
                 If Not row.IsNewRow Then
 
-                    Dim itemcode As Integer = Convert.ToInt32(row.Cells("Column2").Value)
+                    Dim itemcode As Integer = Convert.ToInt32(row.Cells("Column3").Value)
 
-                    Dim itemname As String = row.Cells("Column3").Value.ToString()
+                    Dim itemname As String = row.Cells("Column2").Value.ToString()
 
                     Dim itemprice As Integer = Convert.ToInt32(row.Cells("Column4").Value)
 
