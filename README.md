@@ -5,7 +5,10 @@
 * Out of your business *
 
 > [!NOTE]
-This update include modification of functionalities across the project.
+> This update include modification of functionalities across the project.
+
+> [!WARNING]
+> PHP 50.00 for the whole project reference. May GCash ako, pm nyo na lang ako sa Messenger. HAHAHAHHAHAA
 
 
 ## Update changelog as of 07/04/2024
@@ -64,4 +67,4 @@ mainForm Changes
 ### ----------------------------------------
 
 > [!IMPORTANT]
-> These changelog is almost the final changelog and the almost the final update. Continue the project on your own after.
+> This changelog is almost the final changelog and the almost the final update. Continue the project on your own after.
