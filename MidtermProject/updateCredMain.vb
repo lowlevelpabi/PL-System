@@ -159,15 +159,15 @@ Public Class updateCredMain
 
         Dim ms As New MemoryStream
 
-        mainForm.RoundedPictureBox3.Image.Save(ms, mainForm.RoundedPictureBox3.Image.RawFormat)
+            mainForm.RoundedPictureBox3.Image.Save(ms, mainForm.RoundedPictureBox3.Image.RawFormat)
 
-        Dim update_command As New MySqlCommand("UPDATE `altertable` SET `usr_prf`=@profile WHERE `id` = @eID", con.getConnection())
+            Dim update_command As New MySqlCommand("UPDATE `altertable` SET `usr_prf`=@profile WHERE `id` = @eID", con.getConnection())
 
-        update_command.Parameters.Add("@eID", MySqlDbType.VarChar).Value = mainForm.myID.Text
+            update_command.Parameters.Add("@eID", MySqlDbType.VarChar).Value = mainForm.myID.Text
 
-        update_command.Parameters.Add("@profile", MySqlDbType.LongBlob).Value = ms.ToArray
+            update_command.Parameters.Add("@profile", MySqlDbType.LongBlob).Value = ms.ToArray
 
-        con.openConnection()
+            con.openConnection()
 
         If update_command.ExecuteNonQuery() = 1 Then
 
