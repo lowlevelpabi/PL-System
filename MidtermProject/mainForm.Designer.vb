@@ -23,8 +23,8 @@ Partial Class mainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Panel3 = New Panel()
         Panel6 = New Panel()
@@ -47,6 +47,12 @@ Partial Class mainForm
         panelCart = New Panel()
         Label24 = New Label()
         DataGridView1 = New DataGridView()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
+        Column6 = New DataGridViewTextBoxColumn()
         Label4 = New Label()
         Label3 = New Label()
         btnDelete = New Button()
@@ -136,12 +142,6 @@ Partial Class mainForm
         btnSettings = New BorderlessButton()
         btnHome = New BorderlessButton()
         ToolTip1 = New ToolTip(components)
-        Column1 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column4 = New DataGridViewTextBoxColumn()
-        Column5 = New DataGridViewTextBoxColumn()
-        Column6 = New DataGridViewTextBoxColumn()
         Panel3.SuspendLayout()
         Panel6.SuspendLayout()
         homePanel.SuspendLayout()
@@ -176,7 +176,7 @@ Partial Class mainForm
         Panel3.Location = New Point(0, 0)
         Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1550, 998)
+        Panel3.Size = New Size(1550, 881)
         Panel3.TabIndex = 16
         ' 
         ' Panel6
@@ -188,9 +188,9 @@ Partial Class mainForm
         Panel6.Controls.Add(panelAbout)
         Panel6.Controls.Add(historyPanel)
         Panel6.Dock = DockStyle.Fill
-        Panel6.Location = New Point(0, 79)
+        Panel6.Location = New Point(0, 70)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1550, 919)
+        Panel6.Size = New Size(1550, 811)
         Panel6.TabIndex = 37
         ' 
         ' homePanel
@@ -207,16 +207,16 @@ Partial Class mainForm
         homePanel.Location = New Point(0, 0)
         homePanel.Margin = New Padding(3, 2, 3, 2)
         homePanel.Name = "homePanel"
-        homePanel.Size = New Size(1550, 919)
+        homePanel.Size = New Size(1550, 811)
         homePanel.TabIndex = 15
         ' 
         ' Label32
         ' 
         Label32.AutoSize = True
         Label32.Font = New Font("Segoe UI", 9.75F)
-        Label32.Location = New Point(662, 325)
+        Label32.Location = New Point(662, 287)
         Label32.Name = "Label32"
-        Label32.Size = New Size(269, 20)
+        Label32.Size = New Size(237, 17)
         Label32.TabIndex = 38
         Label32.Text = "(Hover to translate. Unhover to default)"
         ' 
@@ -228,17 +228,17 @@ Partial Class mainForm
         panelLogin.Controls.Add(btnRegister)
         panelLogin.Controls.Add(Label1)
         panelLogin.Controls.Add(btnLogin)
-        panelLogin.Location = New Point(546, 483)
+        panelLogin.Location = New Point(546, 426)
         panelLogin.Name = "panelLogin"
-        panelLogin.Size = New Size(496, 199)
+        panelLogin.Size = New Size(496, 176)
         panelLogin.TabIndex = 37
         ' 
         ' lblHover
         ' 
         lblHover.Font = New Font("Segoe UI", 11.25F)
-        lblHover.Location = New Point(3, 31)
+        lblHover.Location = New Point(3, 27)
         lblHover.Name = "lblHover"
-        lblHover.Size = New Size(490, 27)
+        lblHover.Size = New Size(490, 24)
         lblHover.TabIndex = 38
         lblHover.Text = "Sepertinya Anda belum masuk? (Hover to translate)"
         lblHover.TextAlign = ContentAlignment.MiddleCenter
@@ -248,9 +248,9 @@ Partial Class mainForm
         Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(305, 162)
+        Label13.Location = New Point(305, 143)
         Label13.Name = "Label13"
-        Label13.Size = New Size(139, 20)
+        Label13.Size = New Size(122, 17)
         Label13.TabIndex = 38
         Label13.Text = "Create new account"
         ' 
@@ -259,9 +259,9 @@ Partial Class mainForm
         Label31.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Label31.AutoSize = True
         Label31.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label31.Location = New Point(117, 162)
+        Label31.Location = New Point(117, 143)
         Label31.Name = "Label31"
-        Label31.Size = New Size(46, 20)
+        Label31.Size = New Size(40, 17)
         Label31.TabIndex = 37
         Label31.Text = "Login"
         ' 
@@ -271,10 +271,10 @@ Partial Class mainForm
         btnRegister.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
         btnRegister.FlatStyle = FlatStyle.Flat
         btnRegister.Image = My.Resources.Resources.icons8_register_351
-        btnRegister.Location = New Point(288, 79)
+        btnRegister.Location = New Point(288, 70)
         btnRegister.Margin = New Padding(3, 2, 3, 2)
         btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(154, 65)
+        btnRegister.Size = New Size(154, 57)
         btnRegister.TabIndex = 36
         btnRegister.UseVisualStyleBackColor = False
         ' 
@@ -283,9 +283,9 @@ Partial Class mainForm
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
-        Label1.Location = New Point(226, 101)
+        Label1.Location = New Point(226, 89)
         Label1.Name = "Label1"
-        Label1.Size = New Size(49, 20)
+        Label1.Size = New Size(49, 19)
         Label1.TabIndex = 33
         Label1.Text = "- OR -"
         ' 
@@ -295,10 +295,10 @@ Partial Class mainForm
         btnLogin.BackColor = Color.FromArgb(CByte(13), CByte(127), CByte(205))
         btnLogin.FlatStyle = FlatStyle.Flat
         btnLogin.Image = My.Resources.Resources.icons8_login_30
-        btnLogin.Location = New Point(61, 79)
+        btnLogin.Location = New Point(61, 70)
         btnLogin.Margin = New Padding(3, 2, 3, 2)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(154, 65)
+        btnLogin.Size = New Size(154, 57)
         btnLogin.TabIndex = 35
         btnLogin.UseVisualStyleBackColor = False
         ' 
@@ -306,9 +306,9 @@ Partial Class mainForm
         ' 
         lblHover1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         lblHover1.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        lblHover1.Location = New Point(513, 278)
+        lblHover1.Location = New Point(513, 245)
         lblHover1.Name = "lblHover1"
-        lblHover1.Size = New Size(550, 28)
+        lblHover1.Size = New Size(550, 25)
         lblHover1.TabIndex = 32
         lblHover1.Text = "Jika Anda tidak membeli, Anda jelek. Ya."
         lblHover1.TextAlign = ContentAlignment.MiddleCenter
@@ -320,9 +320,9 @@ Partial Class mainForm
         Label44.BackColor = Color.Transparent
         Label44.Font = New Font("Segoe UI Semibold", 30F, FontStyle.Bold)
         Label44.ForeColor = SystemColors.Control
-        Label44.Location = New Point(622, 188)
+        Label44.Location = New Point(622, 166)
         Label44.Name = "Label44"
-        Label44.Size = New Size(366, 61)
+        Label44.Size = New Size(323, 54)
         Label44.TabIndex = 30
         Label44.Text = "Welcome to MP!"
         ' 
@@ -338,15 +338,15 @@ Partial Class mainForm
         storePanel.Location = New Point(0, 0)
         storePanel.Margin = New Padding(3, 2, 3, 2)
         storePanel.Name = "storePanel"
-        storePanel.Size = New Size(1550, 919)
+        storePanel.Size = New Size(1550, 811)
         storePanel.TabIndex = 14
         ' 
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Location = New Point(70, 891)
+        Label30.Location = New Point(70, 786)
         Label30.Name = "Label30"
-        Label30.Size = New Size(53, 17)
+        Label30.Size = New Size(47, 15)
         Label30.TabIndex = 0
         Label30.Text = "Label30"
         ' 
@@ -357,12 +357,12 @@ Partial Class mainForm
         txtSearchproduct.BorderStyle = BorderStyle.FixedSingle
         txtSearchproduct.Font = New Font("Segoe UI", 10.3F)
         txtSearchproduct.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        txtSearchproduct.Location = New Point(25, 23)
+        txtSearchproduct.Location = New Point(25, 20)
         txtSearchproduct.Margin = New Padding(3, 2, 3, 2)
         txtSearchproduct.Multiline = True
         txtSearchproduct.Name = "txtSearchproduct"
         txtSearchproduct.PlaceholderText = "Search for product name or product model"
-        txtSearchproduct.Size = New Size(1483, 31)
+        txtSearchproduct.Size = New Size(1483, 28)
         txtSearchproduct.TabIndex = 33
         ' 
         ' Label2
@@ -370,19 +370,19 @@ Partial Class mainForm
         Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(25, 879)
+        Label2.Location = New Point(25, 776)
         Label2.Name = "Label2"
-        Label2.Size = New Size(54, 19)
+        Label2.Size = New Size(45, 15)
         Label2.TabIndex = 32
         Label2.Text = "Status :"
         ' 
         ' FlowLayoutPanel1
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.Location = New Point(6, 67)
+        FlowLayoutPanel1.Location = New Point(6, 59)
         FlowLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(1532, 790)
+        FlowLayoutPanel1.Size = New Size(1532, 697)
         FlowLayoutPanel1.TabIndex = 31
         ' 
         ' panelCart
@@ -400,16 +400,16 @@ Partial Class mainForm
         panelCart.Location = New Point(0, 0)
         panelCart.Margin = New Padding(3, 2, 3, 2)
         panelCart.Name = "panelCart"
-        panelCart.Size = New Size(1550, 919)
+        panelCart.Size = New Size(1550, 811)
         panelCart.TabIndex = 16
         ' 
         ' Label24
         ' 
         Label24.AutoSize = True
         Label24.Font = New Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label24.Location = New Point(39, 15)
+        Label24.Location = New Point(39, 13)
         Label24.Name = "Label24"
-        Label24.Size = New Size(882, 19)
+        Label24.Size = New Size(734, 15)
         Label24.TabIndex = 34
         Label24.Text = "Please be advised: Cart record has no database table. All cart item will be cleared out when you sign-out or exit the application. Thank you."
         ' 
@@ -419,50 +419,99 @@ Partial Class mainForm
         DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column3, Column2, Column4, Column5, Column6})
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Window
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
-        DataGridView1.Location = New Point(38, 42)
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridView1.Location = New Point(38, 37)
         DataGridView1.Margin = New Padding(3, 2, 3, 2)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(1471, 726)
+        DataGridView1.Size = New Size(1471, 641)
         DataGridView1.TabIndex = 33
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "#"
+        Column1.MinimumWidth = 6
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        Column1.Visible = False
+        Column1.Width = 30
+        ' 
+        ' Column3
+        ' 
+        Column3.HeaderText = "Product Name"
+        Column3.MinimumWidth = 6
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        Column3.Width = 400
+        ' 
+        ' Column2
+        ' 
+        Column2.HeaderText = "Product Code"
+        Column2.MinimumWidth = 6
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        Column2.Width = 150
+        ' 
+        ' Column4
+        ' 
+        Column4.HeaderText = "Price"
+        Column4.MinimumWidth = 6
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        Column4.Width = 200
+        ' 
+        ' Column5
+        ' 
+        Column5.HeaderText = "Quantity Count"
+        Column5.MinimumWidth = 6
+        Column5.Name = "Column5"
+        Column5.ReadOnly = True
+        Column5.Width = 200
+        ' 
+        ' Column6
+        ' 
+        Column6.HeaderText = "Subtotal per quantity count"
+        Column6.MinimumWidth = 6
+        Column6.Name = "Column6"
+        Column6.ReadOnly = True
+        Column6.Width = 250
         ' 
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label4.AutoSize = True
-        Label4.Location = New Point(92, 870)
+        Label4.Location = New Point(92, 768)
         Label4.Name = "Label4"
-        Label4.Size = New Size(0, 17)
+        Label4.Size = New Size(0, 15)
         Label4.TabIndex = 5
         ' 
         ' Label3
         ' 
         Label3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label3.AutoSize = True
-        Label3.Location = New Point(38, 870)
+        Label3.Location = New Point(38, 768)
         Label3.Name = "Label3"
-        Label3.Size = New Size(50, 17)
+        Label3.Size = New Size(45, 15)
         Label3.TabIndex = 4
         Label3.Text = "Status :"
         ' 
@@ -471,10 +520,10 @@ Partial Class mainForm
         btnDelete.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnDelete.FlatStyle = FlatStyle.Flat
         btnDelete.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        btnDelete.Location = New Point(1178, 852)
+        btnDelete.Location = New Point(1178, 752)
         btnDelete.Margin = New Padding(3, 2, 3, 2)
         btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(106, 35)
+        btnDelete.Size = New Size(106, 31)
         btnDelete.TabIndex = 3
         btnDelete.Text = "Delete"
         btnDelete.UseVisualStyleBackColor = True
@@ -484,10 +533,10 @@ Partial Class mainForm
         btnClear.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnClear.FlatStyle = FlatStyle.Flat
         btnClear.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        btnClear.Location = New Point(1290, 852)
+        btnClear.Location = New Point(1290, 752)
         btnClear.Margin = New Padding(3, 2, 3, 2)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(106, 34)
+        btnClear.Size = New Size(106, 30)
         btnClear.TabIndex = 2
         btnClear.Text = "Clear"
         btnClear.UseVisualStyleBackColor = True
@@ -497,10 +546,10 @@ Partial Class mainForm
         btnCheckout.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnCheckout.FlatStyle = FlatStyle.Flat
         btnCheckout.ForeColor = Color.FromArgb(CByte(192), CByte(192), CByte(194))
-        btnCheckout.Location = New Point(1402, 852)
+        btnCheckout.Location = New Point(1402, 752)
         btnCheckout.Margin = New Padding(3, 2, 3, 2)
         btnCheckout.Name = "btnCheckout"
-        btnCheckout.Size = New Size(106, 35)
+        btnCheckout.Size = New Size(106, 31)
         btnCheckout.TabIndex = 1
         btnCheckout.Text = "Place order"
         btnCheckout.UseVisualStyleBackColor = True
@@ -516,7 +565,7 @@ Partial Class mainForm
         panelSettings.Location = New Point(0, 0)
         panelSettings.Margin = New Padding(3, 2, 3, 2)
         panelSettings.Name = "panelSettings"
-        panelSettings.Size = New Size(1550, 919)
+        panelSettings.Size = New Size(1550, 811)
         panelSettings.TabIndex = 36
         ' 
         ' Panel1
@@ -528,7 +577,7 @@ Partial Class mainForm
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1550, 87)
+        Panel1.Size = New Size(1550, 77)
         Panel1.TabIndex = 5
         ' 
         ' btnSett
@@ -541,7 +590,7 @@ Partial Class mainForm
         btnSett.Location = New Point(784, 0)
         btnSett.Margin = New Padding(3, 2, 3, 2)
         btnSett.Name = "btnSett"
-        btnSett.Size = New Size(220, 87)
+        btnSett.Size = New Size(220, 77)
         btnSett.TabIndex = 9
         btnSett.Text = "App setting"
         btnSett.UseVisualStyleBackColor = False
@@ -556,7 +605,7 @@ Partial Class mainForm
         btnMod.Location = New Point(573, 0)
         btnMod.Margin = New Padding(3, 2, 3, 2)
         btnMod.Name = "btnMod"
-        btnMod.Size = New Size(211, 87)
+        btnMod.Size = New Size(211, 77)
         btnMod.TabIndex = 8
         btnMod.Text = "Modify credentials"
         btnMod.UseVisualStyleBackColor = False
@@ -568,7 +617,7 @@ Partial Class mainForm
         Panel5.Location = New Point(0, 0)
         Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(1550, 919)
+        Panel5.Size = New Size(1550, 811)
         Panel5.TabIndex = 7
         ' 
         ' Panel2
@@ -579,7 +628,7 @@ Partial Class mainForm
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1550, 919)
+        Panel2.Size = New Size(1550, 811)
         Panel2.TabIndex = 6
         ' 
         ' modPanel
@@ -595,7 +644,7 @@ Partial Class mainForm
         modPanel.Location = New Point(0, 0)
         modPanel.Margin = New Padding(3, 2, 3, 2)
         modPanel.Name = "modPanel"
-        modPanel.Size = New Size(1550, 919)
+        modPanel.Size = New Size(1550, 811)
         modPanel.TabIndex = 5
         ' 
         ' GroupBox4
@@ -611,11 +660,11 @@ Partial Class mainForm
         GroupBox4.Controls.Add(cbShipping)
         GroupBox4.Controls.Add(txtReceiver)
         GroupBox4.Controls.Add(GroupBox6)
-        GroupBox4.Location = New Point(53, 545)
+        GroupBox4.Location = New Point(53, 481)
         GroupBox4.Margin = New Padding(3, 2, 3, 2)
         GroupBox4.Name = "GroupBox4"
         GroupBox4.Padding = New Padding(3, 2, 3, 2)
-        GroupBox4.Size = New Size(589, 322)
+        GroupBox4.Size = New Size(589, 284)
         GroupBox4.TabIndex = 16
         GroupBox4.TabStop = False
         ' 
@@ -623,9 +672,9 @@ Partial Class mainForm
         ' 
         btnDeliver.BackColor = Color.FromArgb(CByte(30), CByte(29), CByte(29))
         btnDeliver.FlatStyle = FlatStyle.Flat
-        btnDeliver.Location = New Point(39, 246)
+        btnDeliver.Location = New Point(39, 217)
         btnDeliver.Name = "btnDeliver"
-        btnDeliver.Size = New Size(507, 46)
+        btnDeliver.Size = New Size(507, 41)
         btnDeliver.TabIndex = 10
         btnDeliver.Text = "Confirm"
         btnDeliver.UseVisualStyleBackColor = False
@@ -633,63 +682,63 @@ Partial Class mainForm
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Location = New Point(328, 154)
+        Label29.Location = New Point(328, 136)
         Label29.Name = "Label29"
-        Label29.Size = New Size(46, 19)
+        Label29.Size = New Size(39, 15)
         Label29.TabIndex = 9
         Label29.Text = "Email:"
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(328, 184)
+        txtEmail.Location = New Point(328, 162)
         txtEmail.Margin = New Padding(3, 2, 3, 2)
         txtEmail.Name = "txtEmail"
         txtEmail.PlaceholderText = "user@email.com"
-        txtEmail.Size = New Size(218, 25)
+        txtEmail.Size = New Size(218, 23)
         txtEmail.TabIndex = 8
         ' 
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Location = New Point(328, 57)
+        Label28.Location = New Point(328, 50)
         Label28.Name = "Label28"
-        Label28.Size = New Size(87, 19)
+        Label28.Size = New Size(73, 15)
         Label28.TabIndex = 7
         Label28.Text = "Contact No.:"
         ' 
         ' txtContact
         ' 
-        txtContact.Location = New Point(328, 86)
+        txtContact.Location = New Point(328, 76)
         txtContact.Margin = New Padding(3, 2, 3, 2)
         txtContact.Name = "txtContact"
         txtContact.PlaceholderText = "09xxxxxxxxx"
-        txtContact.Size = New Size(218, 25)
+        txtContact.Size = New Size(218, 23)
         txtContact.TabIndex = 6
         ' 
         ' Label27
         ' 
         Label27.AutoSize = True
-        Label27.Location = New Point(39, 154)
+        Label27.Location = New Point(39, 136)
         Label27.Name = "Label27"
-        Label27.Size = New Size(61, 19)
+        Label27.Size = New Size(52, 15)
         Label27.TabIndex = 5
         Label27.Text = "Address:"
         ' 
         ' txtAddress
         ' 
-        txtAddress.Location = New Point(39, 184)
+        txtAddress.Location = New Point(39, 162)
         txtAddress.Margin = New Padding(3, 2, 3, 2)
         txtAddress.Name = "txtAddress"
         txtAddress.PlaceholderText = "01 Location 1, Zone 1"
-        txtAddress.Size = New Size(218, 25)
+        txtAddress.Size = New Size(218, 23)
         txtAddress.TabIndex = 4
         ' 
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Location = New Point(39, 57)
+        Label21.Location = New Point(39, 50)
         Label21.Name = "Label21"
-        Label21.Size = New Size(141, 19)
+        Label21.Size = New Size(117, 15)
         Label21.TabIndex = 1
         Label21.Text = "Receiver: (Full name)"
         ' 
@@ -699,18 +748,18 @@ Partial Class mainForm
         cbShipping.Location = New Point(8, 0)
         cbShipping.Margin = New Padding(3, 2, 3, 2)
         cbShipping.Name = "cbShipping"
-        cbShipping.Size = New Size(173, 23)
+        cbShipping.Size = New Size(149, 19)
         cbShipping.TabIndex = 2
         cbShipping.Text = "Setup shipping address"
         cbShipping.UseVisualStyleBackColor = True
         ' 
         ' txtReceiver
         ' 
-        txtReceiver.Location = New Point(39, 86)
+        txtReceiver.Location = New Point(39, 76)
         txtReceiver.Margin = New Padding(3, 2, 3, 2)
         txtReceiver.Name = "txtReceiver"
         txtReceiver.PlaceholderText = "Juan Dela Cruz"
-        txtReceiver.Size = New Size(218, 25)
+        txtReceiver.Size = New Size(218, 23)
         txtReceiver.TabIndex = 0
         ' 
         ' GroupBox6
@@ -721,11 +770,11 @@ Partial Class mainForm
         GroupBox6.Controls.Add(TextBox2)
         GroupBox6.Controls.Add(Label26)
         GroupBox6.Controls.Add(TextBox3)
-        GroupBox6.Location = New Point(910, 60)
+        GroupBox6.Location = New Point(910, 53)
         GroupBox6.Margin = New Padding(3, 2, 3, 2)
         GroupBox6.Name = "GroupBox6"
         GroupBox6.Padding = New Padding(3, 2, 3, 2)
-        GroupBox6.Size = New Size(338, 179)
+        GroupBox6.Size = New Size(338, 158)
         GroupBox6.TabIndex = 3
         GroupBox6.TabStop = False
         ' 
@@ -735,7 +784,7 @@ Partial Class mainForm
         CheckBox2.Location = New Point(0, -1)
         CheckBox2.Margin = New Padding(3, 2, 3, 2)
         CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(138, 23)
+        CheckBox2.Size = New Size(119, 19)
         CheckBox2.TabIndex = 6
         CheckBox2.Text = "Change password"
         CheckBox2.UseVisualStyleBackColor = True
@@ -743,44 +792,44 @@ Partial Class mainForm
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Location = New Point(29, 97)
+        Label25.Location = New Point(29, 86)
         Label25.Name = "Label25"
-        Label25.Size = New Size(115, 19)
+        Label25.Size = New Size(96, 15)
         Label25.TabIndex = 3
         Label25.Text = "Repeat password"
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(29, 127)
+        TextBox2.Location = New Point(29, 112)
         TextBox2.Margin = New Padding(3, 2, 3, 2)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(218, 25)
+        TextBox2.Size = New Size(218, 23)
         TextBox2.TabIndex = 2
         ' 
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Location = New Point(29, 35)
+        Label26.Location = New Point(29, 31)
         Label26.Name = "Label26"
-        Label26.Size = New Size(108, 19)
+        Label26.Size = New Size(90, 15)
         Label26.TabIndex = 1
         Label26.Text = "New password :"
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(29, 65)
+        TextBox3.Location = New Point(29, 57)
         TextBox3.Margin = New Padding(3, 2, 3, 2)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(218, 25)
+        TextBox3.Size = New Size(218, 23)
         TextBox3.TabIndex = 0
         ' 
         ' myID
         ' 
         myID.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         myID.AutoSize = True
-        myID.Location = New Point(118, 887)
+        myID.Location = New Point(118, 783)
         myID.Name = "myID"
-        myID.Size = New Size(17, 19)
+        myID.Size = New Size(14, 15)
         myID.TabIndex = 15
         myID.Text = "0"
         ' 
@@ -790,11 +839,11 @@ Partial Class mainForm
         GroupBox3.Controls.Add(RoundedPictureBox3)
         GroupBox3.Controls.Add(GroupBox1)
         GroupBox3.Controls.Add(GroupBox2)
-        GroupBox3.Location = New Point(53, 209)
+        GroupBox3.Location = New Point(53, 184)
         GroupBox3.Margin = New Padding(3, 2, 3, 2)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.Padding = New Padding(3, 2, 3, 2)
-        GroupBox3.Size = New Size(1172, 303)
+        GroupBox3.Size = New Size(1172, 267)
         GroupBox3.TabIndex = 5
         GroupBox3.TabStop = False
         GroupBox3.Text = "Choose profile"
@@ -802,20 +851,20 @@ Partial Class mainForm
         ' btnPicture
         ' 
         btnPicture.FlatStyle = FlatStyle.Flat
-        btnPicture.Location = New Point(109, 218)
+        btnPicture.Location = New Point(109, 192)
         btnPicture.Margin = New Padding(3, 2, 3, 2)
         btnPicture.Name = "btnPicture"
-        btnPicture.Size = New Size(82, 25)
+        btnPicture.Size = New Size(82, 22)
         btnPicture.TabIndex = 5
         btnPicture.Text = "Confirm"
         btnPicture.UseVisualStyleBackColor = True
         ' 
         ' RoundedPictureBox3
         ' 
-        RoundedPictureBox3.Location = New Point(81, 77)
+        RoundedPictureBox3.Location = New Point(81, 68)
         RoundedPictureBox3.Margin = New Padding(3, 2, 3, 2)
         RoundedPictureBox3.Name = "RoundedPictureBox3"
-        RoundedPictureBox3.Size = New Size(140, 126)
+        RoundedPictureBox3.Size = New Size(140, 111)
         RoundedPictureBox3.SizeMode = PictureBoxSizeMode.Zoom
         RoundedPictureBox3.TabIndex = 4
         RoundedPictureBox3.TabStop = False
@@ -826,11 +875,11 @@ Partial Class mainForm
         GroupBox1.Controls.Add(cbUsername)
         GroupBox1.Controls.Add(Label18)
         GroupBox1.Controls.Add(newUsername)
-        GroupBox1.Location = New Point(296, 61)
+        GroupBox1.Location = New Point(296, 54)
         GroupBox1.Margin = New Padding(3, 2, 3, 2)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 2, 3, 2)
-        GroupBox1.Size = New Size(338, 179)
+        GroupBox1.Size = New Size(338, 158)
         GroupBox1.TabIndex = 2
         GroupBox1.TabStop = False
         ' 
@@ -840,7 +889,7 @@ Partial Class mainForm
         cbUsername.Location = New Point(0, 0)
         cbUsername.Margin = New Padding(3, 2, 3, 2)
         cbUsername.Name = "cbUsername"
-        cbUsername.Size = New Size(139, 23)
+        cbUsername.Size = New Size(121, 19)
         cbUsername.TabIndex = 2
         cbUsername.Text = "Change username"
         cbUsername.UseVisualStyleBackColor = True
@@ -848,18 +897,18 @@ Partial Class mainForm
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Location = New Point(29, 58)
+        Label18.Location = New Point(29, 51)
         Label18.Name = "Label18"
-        Label18.Size = New Size(109, 19)
+        Label18.Size = New Size(92, 15)
         Label18.TabIndex = 1
         Label18.Text = "New username :"
         ' 
         ' newUsername
         ' 
-        newUsername.Location = New Point(29, 86)
+        newUsername.Location = New Point(29, 76)
         newUsername.Margin = New Padding(3, 2, 3, 2)
         newUsername.Name = "newUsername"
-        newUsername.Size = New Size(218, 25)
+        newUsername.Size = New Size(218, 23)
         newUsername.TabIndex = 0
         ' 
         ' GroupBox2
@@ -870,11 +919,11 @@ Partial Class mainForm
         GroupBox2.Controls.Add(newPass2)
         GroupBox2.Controls.Add(Label20)
         GroupBox2.Controls.Add(newPass)
-        GroupBox2.Location = New Point(716, 61)
+        GroupBox2.Location = New Point(716, 54)
         GroupBox2.Margin = New Padding(3, 2, 3, 2)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Padding = New Padding(3, 2, 3, 2)
-        GroupBox2.Size = New Size(338, 179)
+        GroupBox2.Size = New Size(338, 158)
         GroupBox2.TabIndex = 3
         GroupBox2.TabStop = False
         ' 
@@ -884,7 +933,7 @@ Partial Class mainForm
         cbPassword.Location = New Point(0, 0)
         cbPassword.Margin = New Padding(3, 2, 3, 2)
         cbPassword.Name = "cbPassword"
-        cbPassword.Size = New Size(138, 23)
+        cbPassword.Size = New Size(119, 19)
         cbPassword.TabIndex = 6
         cbPassword.Text = "Change password"
         cbPassword.UseVisualStyleBackColor = True
@@ -892,53 +941,53 @@ Partial Class mainForm
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Location = New Point(29, 99)
+        Label19.Location = New Point(29, 87)
         Label19.Name = "Label19"
-        Label19.Size = New Size(115, 19)
+        Label19.Size = New Size(96, 15)
         Label19.TabIndex = 3
         Label19.Text = "Repeat password"
         ' 
         ' newPass2
         ' 
-        newPass2.Location = New Point(29, 127)
+        newPass2.Location = New Point(29, 112)
         newPass2.Margin = New Padding(3, 2, 3, 2)
         newPass2.Name = "newPass2"
-        newPass2.Size = New Size(218, 25)
+        newPass2.Size = New Size(218, 23)
         newPass2.TabIndex = 2
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Location = New Point(29, 36)
+        Label20.Location = New Point(29, 32)
         Label20.Name = "Label20"
-        Label20.Size = New Size(108, 19)
+        Label20.Size = New Size(90, 15)
         Label20.TabIndex = 1
         Label20.Text = "New password :"
         ' 
         ' newPass
         ' 
-        newPass.Location = New Point(29, 65)
+        newPass.Location = New Point(29, 57)
         newPass.Margin = New Padding(3, 2, 3, 2)
         newPass.Name = "newPass"
-        newPass.Size = New Size(218, 25)
+        newPass.Size = New Size(218, 23)
         newPass.TabIndex = 0
         ' 
         ' Label22
         ' 
         Label22.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label22.AutoSize = True
-        Label22.Location = New Point(25, 887)
+        Label22.Location = New Point(25, 783)
         Label22.Name = "Label22"
-        Label22.Size = New Size(111, 19)
+        Label22.Size = New Size(93, 15)
         Label22.TabIndex = 14
         Label22.Text = "Your fucking id :"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(644, 160)
+        Label16.Location = New Point(644, 141)
         Label16.Name = "Label16"
-        Label16.Size = New Size(335, 19)
+        Label16.Size = New Size(283, 15)
         Label16.TabIndex = 1
         Label16.Text = "Manage your account credentials through this page."
         ' 
@@ -946,9 +995,9 @@ Partial Class mainForm
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
-        Label17.Location = New Point(655, 117)
+        Label17.Location = New Point(655, 103)
         Label17.Name = "Label17"
-        Label17.Size = New Size(288, 41)
+        Label17.Size = New Size(259, 37)
         Label17.TabIndex = 0
         Label17.Text = "Account credentials"
         ' 
@@ -961,15 +1010,15 @@ Partial Class mainForm
         appPanel.Location = New Point(0, 0)
         appPanel.Margin = New Padding(3, 2, 3, 2)
         appPanel.Name = "appPanel"
-        appPanel.Size = New Size(1550, 919)
+        appPanel.Size = New Size(1550, 811)
         appPanel.TabIndex = 6
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(662, 188)
+        Label15.Location = New Point(662, 166)
         Label15.Name = "Label15"
-        Label15.Size = New Size(324, 19)
+        Label15.Size = New Size(271, 15)
         Label15.TabIndex = 1
         Label15.Text = "No available feature for now. Soon to be available."
         ' 
@@ -977,9 +1026,9 @@ Partial Class mainForm
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(746, 131)
+        Label14.Location = New Point(746, 116)
         Label14.Name = "Label14"
-        Label14.Size = New Size(110, 25)
+        Label14.Size = New Size(96, 21)
         Label14.TabIndex = 0
         Label14.Text = "App setting"
         ' 
@@ -1005,7 +1054,7 @@ Partial Class mainForm
         panelAbout.Location = New Point(0, 0)
         panelAbout.Margin = New Padding(3, 2, 3, 2)
         panelAbout.Name = "panelAbout"
-        panelAbout.Size = New Size(1550, 919)
+        panelAbout.Size = New Size(1550, 811)
         panelAbout.TabIndex = 18
         ' 
         ' Label12
@@ -1013,9 +1062,9 @@ Partial Class mainForm
         Label12.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(265, 748)
+        Label12.Location = New Point(265, 660)
         Label12.Name = "Label12"
-        Label12.Size = New Size(55, 19)
+        Label12.Size = New Size(46, 15)
         Label12.TabIndex = 29
         Label12.Text = "MySQL"
         ' 
@@ -1024,9 +1073,9 @@ Partial Class mainForm
         Label11.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(244, 715)
+        Label11.Location = New Point(244, 631)
         Label11.Name = "Label11"
-        Label11.Size = New Size(181, 19)
+        Label11.Size = New Size(151, 15)
         Label11.TabIndex = 28
         Label11.Text = "Microsoft Visual Basic .NET"
         ' 
@@ -1035,9 +1084,9 @@ Partial Class mainForm
         Label10.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(134, 748)
+        Label10.Location = New Point(134, 660)
         Label10.Name = "Label10"
-        Label10.Size = New Size(133, 19)
+        Label10.Size = New Size(113, 15)
         Label10.TabIndex = 27
         Label10.Text = "Other components :"
         ' 
@@ -1046,9 +1095,9 @@ Partial Class mainForm
         Label9.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(134, 715)
+        Label9.Location = New Point(134, 631)
         Label9.Name = "Label9"
-        Label9.Size = New Size(109, 19)
+        Label9.Size = New Size(93, 15)
         Label9.TabIndex = 26
         Label9.Text = "Language used :"
         ' 
@@ -1056,9 +1105,9 @@ Partial Class mainForm
         ' 
         Label47.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label47.AutoSize = True
-        Label47.Location = New Point(134, 861)
+        Label47.Location = New Point(134, 760)
         Label47.Name = "Label47"
-        Label47.Size = New Size(57, 17)
+        Label47.Size = New Size(53, 15)
         Label47.TabIndex = 21
         Label47.Text = "BSCS-3A"
         ' 
@@ -1066,9 +1115,9 @@ Partial Class mainForm
         ' 
         Label48.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label48.AutoSize = True
-        Label48.Location = New Point(134, 821)
+        Label48.Location = New Point(134, 724)
         Label48.Name = "Label48"
-        Label48.Size = New Size(80, 17)
+        Label48.Size = New Size(72, 15)
         Label48.TabIndex = 22
         Label48.Text = "Reyes, Ryan."
         ' 
@@ -1077,9 +1126,9 @@ Partial Class mainForm
         Label45.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label45.AutoSize = True
         Label45.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label45.Location = New Point(134, 785)
+        Label45.Location = New Point(134, 693)
         Label45.Name = "Label45"
-        Label45.Size = New Size(131, 19)
+        Label45.Size = New Size(108, 15)
         Label45.TabIndex = 20
         Label45.Text = "Created by: alterrrrr"
         ' 
@@ -1088,9 +1137,9 @@ Partial Class mainForm
         Label8.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
-        Label8.Location = New Point(118, 662)
+        Label8.Location = New Point(118, 584)
         Label8.Name = "Label8"
-        Label8.Size = New Size(203, 41)
+        Label8.Size = New Size(181, 37)
         Label8.TabIndex = 25
         Label8.Text = "Development"
         ' 
@@ -1099,9 +1148,9 @@ Partial Class mainForm
         Label7.Anchor = AnchorStyles.Left
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(134, 388)
+        Label7.Location = New Point(134, 342)
         Label7.Name = "Label7"
-        Label7.Size = New Size(736, 57)
+        Label7.Size = New Size(620, 45)
         Label7.TabIndex = 24
         Label7.Text = resources.GetString("Label7.Text")
         ' 
@@ -1110,9 +1159,9 @@ Partial Class mainForm
         Label6.Anchor = AnchorStyles.Left
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
-        Label6.Location = New Point(118, 341)
+        Label6.Location = New Point(118, 301)
         Label6.Name = "Label6"
-        Label6.Size = New Size(81, 41)
+        Label6.Size = New Size(73, 37)
         Label6.TabIndex = 23
         Label6.Text = "Goal"
         ' 
@@ -1120,9 +1169,9 @@ Partial Class mainForm
         ' 
         Label54.AutoSize = True
         Label54.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label54.Location = New Point(134, 101)
+        Label54.Location = New Point(134, 89)
         Label54.Name = "Label54"
-        Label54.Size = New Size(751, 38)
+        Label54.Size = New Size(625, 30)
         Label54.TabIndex = 13
         Label54.Text = "This software application is created for school project. This project is not for sale, and it is exclusive only to the owner." & vbCrLf & "If you have any concern kindly reach out or contact the creator."
         ' 
@@ -1130,9 +1179,9 @@ Partial Class mainForm
         ' 
         Label55.AutoSize = True
         Label55.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
-        Label55.Location = New Point(118, 45)
+        Label55.Location = New Point(118, 40)
         Label55.Name = "Label55"
-        Label55.Size = New Size(103, 41)
+        Label55.Size = New Size(93, 37)
         Label55.TabIndex = 12
         Label55.Text = "About"
         ' 
@@ -1149,7 +1198,7 @@ Partial Class mainForm
         historyPanel.Location = New Point(0, 0)
         historyPanel.Margin = New Padding(3, 2, 3, 2)
         historyPanel.Name = "historyPanel"
-        historyPanel.Size = New Size(1550, 919)
+        historyPanel.Size = New Size(1550, 811)
         historyPanel.TabIndex = 33
         ' 
         ' Label23
@@ -1157,9 +1206,9 @@ Partial Class mainForm
         Label23.Anchor = AnchorStyles.Top
         Label23.AutoSize = True
         Label23.Font = New Font("Segoe UI", 10.18868F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label23.Location = New Point(675, 45)
+        Label23.Location = New Point(675, 40)
         Label23.Name = "Label23"
-        Label23.Size = New Size(236, 20)
+        Label23.Size = New Size(222, 19)
         Label23.TabIndex = 2
         Label23.Text = "Review your purchase history here."
         ' 
@@ -1168,9 +1217,9 @@ Partial Class mainForm
         Label5.Anchor = AnchorStyles.Top
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI Semibold", 12.2264156F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(698, 15)
+        Label5.Location = New Point(698, 13)
         Label5.Name = "Label5"
-        Label5.Size = New Size(179, 25)
+        Label5.Size = New Size(170, 23)
         Label5.TabIndex = 1
         Label5.Text = "PURCHASE HISTORY"
         ' 
@@ -1183,13 +1232,13 @@ Partial Class mainForm
         DataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView2.Columns.AddRange(New DataGridViewColumn() {Column7, Column8, Column9, Column16, Column18, Column19, Column15, Column10, Column17, Column11, Column12, Column13, Column14})
-        DataGridView2.Location = New Point(38, 77)
+        DataGridView2.Location = New Point(38, 68)
         DataGridView2.Name = "DataGridView2"
         DataGridView2.ReadOnly = True
         DataGridView2.RowHeadersVisible = False
         DataGridView2.RowHeadersWidth = 45
         DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView2.Size = New Size(1479, 809)
+        DataGridView2.Size = New Size(1479, 714)
         DataGridView2.TabIndex = 0
         ' 
         ' Column7
@@ -1312,15 +1361,15 @@ Partial Class mainForm
         Panel4.Location = New Point(0, 0)
         Panel4.Margin = New Padding(3, 2, 3, 2)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1550, 79)
+        Panel4.Size = New Size(1550, 70)
         Panel4.TabIndex = 31
         ' 
         ' txtSign
         ' 
         txtSign.AutoSize = True
-        txtSign.Location = New Point(164, 32)
+        txtSign.Location = New Point(162, 28)
         txtSign.Name = "txtSign"
-        txtSign.Size = New Size(0, 17)
+        txtSign.Size = New Size(0, 15)
         txtSign.TabIndex = 38
         ' 
         ' btnHistory
@@ -1332,17 +1381,17 @@ Partial Class mainForm
         btnHistory.Location = New Point(1429, 0)
         btnHistory.Margin = New Padding(3, 2, 3, 2)
         btnHistory.Name = "btnHistory"
-        btnHistory.Size = New Size(121, 77)
+        btnHistory.Size = New Size(121, 68)
         btnHistory.TabIndex = 37
         ToolTip1.SetToolTip(btnHistory, "Purchase History")
         btnHistory.UseVisualStyleBackColor = False
         ' 
         ' RoundedPictureBox1
         ' 
-        RoundedPictureBox1.Location = New Point(92, 6)
+        RoundedPictureBox1.Location = New Point(103, 9)
         RoundedPictureBox1.Margin = New Padding(3, 2, 3, 2)
         RoundedPictureBox1.Name = "RoundedPictureBox1"
-        RoundedPictureBox1.Size = New Size(64, 68)
+        RoundedPictureBox1.Size = New Size(52, 53)
         RoundedPictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         RoundedPictureBox1.TabIndex = 34
         RoundedPictureBox1.TabStop = False
@@ -1356,7 +1405,7 @@ Partial Class mainForm
         btnCart.Location = New Point(730, 1)
         btnCart.Margin = New Padding(3, 2, 3, 2)
         btnCart.Name = "btnCart"
-        btnCart.Size = New Size(121, 77)
+        btnCart.Size = New Size(121, 68)
         btnCart.TabIndex = 34
         ToolTip1.SetToolTip(btnCart, "My Cart")
         btnCart.UseVisualStyleBackColor = False
@@ -1370,7 +1419,7 @@ Partial Class mainForm
         btnStore.Location = New Point(609, 1)
         btnStore.Margin = New Padding(3, 2, 3, 2)
         btnStore.Name = "btnStore"
-        btnStore.Size = New Size(121, 77)
+        btnStore.Size = New Size(121, 68)
         btnStore.TabIndex = 34
         btnStore.UseVisualStyleBackColor = False
         ' 
@@ -1383,7 +1432,7 @@ Partial Class mainForm
         btnAbout.Location = New Point(972, 1)
         btnAbout.Margin = New Padding(3, 2, 3, 2)
         btnAbout.Name = "btnAbout"
-        btnAbout.Size = New Size(121, 77)
+        btnAbout.Size = New Size(121, 68)
         btnAbout.TabIndex = 35
         btnAbout.UseVisualStyleBackColor = False
         ' 
@@ -1396,7 +1445,7 @@ Partial Class mainForm
         btnSettings.Location = New Point(851, 1)
         btnSettings.Margin = New Padding(3, 2, 3, 2)
         btnSettings.Name = "btnSettings"
-        btnSettings.Size = New Size(121, 77)
+        btnSettings.Size = New Size(121, 68)
         btnSettings.TabIndex = 36
         btnSettings.UseVisualStyleBackColor = False
         ' 
@@ -1409,64 +1458,15 @@ Partial Class mainForm
         btnHome.Location = New Point(488, 1)
         btnHome.Margin = New Padding(3, 2, 3, 2)
         btnHome.Name = "btnHome"
-        btnHome.Size = New Size(121, 77)
+        btnHome.Size = New Size(121, 68)
         btnHome.TabIndex = 33
         btnHome.UseVisualStyleBackColor = False
         ' 
-        ' Column1
-        ' 
-        Column1.HeaderText = "#"
-        Column1.MinimumWidth = 6
-        Column1.Name = "Column1"
-        Column1.ReadOnly = True
-        Column1.Visible = False
-        Column1.Width = 30
-        ' 
-        ' Column3
-        ' 
-        Column3.HeaderText = "Product Name"
-        Column3.MinimumWidth = 6
-        Column3.Name = "Column3"
-        Column3.ReadOnly = True
-        Column3.Width = 400
-        ' 
-        ' Column2
-        ' 
-        Column2.HeaderText = "Product Code"
-        Column2.MinimumWidth = 6
-        Column2.Name = "Column2"
-        Column2.ReadOnly = True
-        Column2.Width = 150
-        ' 
-        ' Column4
-        ' 
-        Column4.HeaderText = "Price"
-        Column4.MinimumWidth = 6
-        Column4.Name = "Column4"
-        Column4.ReadOnly = True
-        Column4.Width = 200
-        ' 
-        ' Column5
-        ' 
-        Column5.HeaderText = "Quantity Count"
-        Column5.MinimumWidth = 6
-        Column5.Name = "Column5"
-        Column5.ReadOnly = True
-        Column5.Width = 200
-        ' 
-        ' Column6
-        ' 
-        Column6.HeaderText = "Subtotal per quantity count"
-        Column6.MinimumWidth = 6
-        Column6.Name = "Column6"
-        Column6.ReadOnly = True
-        Column6.Width = 250
-        ' 
         ' mainForm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 17F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1550, 998)
+        ClientSize = New Size(1550, 881)
         Controls.Add(Panel3)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "mainForm"

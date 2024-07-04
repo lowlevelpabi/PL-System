@@ -660,9 +660,6 @@ Public Class mainForm
 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
-        ' mybase funcions
         ' - controls behavior if unSession is blank and isLoginSession is false
 
         Dim overrider As String
@@ -687,6 +684,8 @@ Public Class mainForm
 
             lblHover1.Text = "Jika Anda tidak membeli, Anda jelek. Ya."
 
+            btnPicture.Enabled = False
+
         Else
 
             Text = "Midterm Project : Main | Signed-in as: " & unSession
@@ -699,9 +698,23 @@ Public Class mainForm
 
             txtSign.Text = unSession
 
+            btnPicture.Enabled = True
+
             lblHover1.Text = "Jika Anda tidak membeli " & unSession & ", Anda jelek. Ya."
         End If
 
+
+        '' picture box !enable
+
+        If RoundedPictureBox3.Image Is Nothing Then
+
+            btnPicture.Enabled = False
+
+        Else
+
+            btnPicture.Enabled = True
+
+        End If
 
         ' - ...
 
@@ -722,34 +735,6 @@ Public Class mainForm
         orderFunction()
 
         ' - ...
-
-
-
-        ' - groupbox color
-
-        GroupBox3.ForeColor = Color.FromArgb(192, 192, 194)
-
-        ' - ...
-
-
-
-        ' - extras
-
-        DataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(192, 192, 194)
-
-        DataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(37, 34, 35)
-
-        DataGridView2.DefaultCellStyle.ForeColor = Color.FromArgb(192, 192, 194)
-
-        DataGridView2.DefaultCellStyle.BackColor = Color.FromArgb(37, 34, 35)
-
-        ToolTip1.SetToolTip(btnHome, "Home")
-
-        ToolTip1.SetToolTip(btnStore, "Store")
-
-        ToolTip1.SetToolTip(btnAbout, "Abut us")
-
-        ToolTip1.SetToolTip(btnSettings, "Settings")
 
     End Sub
 
@@ -858,13 +843,13 @@ Public Class mainForm
 
     End Sub
 
-    Private Sub RoundedPictureBox3_Click(sender As Object, e As EventArgs) Handles RoundedPictureBox3.Click, RoundedPictureBox3.Click
+    Private Sub RoundedPictureBox3_Click(sender As Object, e As EventArgs) Handles RoundedPictureBox3.Click
 
         updateCredMain.pfp(Me)
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPicture.Click, btnPicture.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPicture.Click
 
         updateCredMain.submit(Me)
 
