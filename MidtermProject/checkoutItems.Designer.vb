@@ -42,8 +42,8 @@ Partial Class checkoutItems
         Label4 = New Label()
         Label3 = New Label()
         Column1 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
         Column4 = New DataGridViewTextBoxColumn()
         Column5 = New DataGridViewTextBoxColumn()
         Column6 = New DataGridViewTextBoxColumn()
@@ -104,17 +104,13 @@ Partial Class checkoutItems
         ' 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(37), CByte(34), CByte(35))
-        DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column3, Column2, Column4, Column5, Column6})
-        DataGridView1.Location = New Point(295, 12)
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6})
+        DataGridView1.Location = New Point(302, 18)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersVisible = False
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(1103, 315)
-        DataGridView1.TabIndex = 34
+        DataGridView1.Size = New Size(1112, 346)
+        DataGridView1.TabIndex = 39
         ' 
         ' Label5
         ' 
@@ -244,51 +240,39 @@ Partial Class checkoutItems
         ' Column1
         ' 
         Column1.HeaderText = "#"
-        Column1.MinimumWidth = 6
         Column1.Name = "Column1"
         Column1.ReadOnly = True
         Column1.Visible = False
-        Column1.Width = 30
-        ' 
-        ' Column3
-        ' 
-        Column3.HeaderText = "Product Name"
-        Column3.MinimumWidth = 6
-        Column3.Name = "Column3"
-        Column3.ReadOnly = True
-        Column3.Width = 300
         ' 
         ' Column2
         ' 
-        Column2.HeaderText = "Product Code"
-        Column2.MinimumWidth = 6
+        Column2.HeaderText = "Product Name"
         Column2.Name = "Column2"
         Column2.ReadOnly = True
-        Column2.Width = 150
+        ' 
+        ' Column3
+        ' 
+        Column3.HeaderText = "Product Code"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
         ' 
         ' Column4
         ' 
-        Column4.HeaderText = "Price"
-        Column4.MinimumWidth = 6
+        Column4.HeaderText = "Product Price"
         Column4.Name = "Column4"
         Column4.ReadOnly = True
-        Column4.Width = 200
         ' 
         ' Column5
         ' 
-        Column5.HeaderText = "Quantity Count"
-        Column5.MinimumWidth = 6
+        Column5.HeaderText = "Quantity"
         Column5.Name = "Column5"
         Column5.ReadOnly = True
-        Column5.Width = 200
         ' 
         ' Column6
         ' 
-        Column6.HeaderText = "Subtotal per quantity count"
-        Column6.MinimumWidth = 6
+        Column6.HeaderText = "Item subtotal"
         Column6.Name = "Column6"
         Column6.ReadOnly = True
-        Column6.Width = 217
         ' 
         ' checkoutItems
         ' 
@@ -336,8 +320,8 @@ Partial Class checkoutItems
     Friend WithEvents txtName As TextBox
     Friend WithEvents targetLabel As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
