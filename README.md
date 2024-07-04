@@ -57,6 +57,11 @@ mainForm Changes
 
 > Added new assets such as Images and backup class files for future enhancement.
 
+### Printview
+
+- [x] Fixed abnormal functionality where item/s in checkout items datagridview is not accessible through the loading screen.
+
+### ----------------------------------------
 
 > [!IMPORTANT]
 > These changelog is almost the final changelog and the almost the final update. Continue the project on your own after.
