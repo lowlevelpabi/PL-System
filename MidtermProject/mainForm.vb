@@ -477,7 +477,7 @@ Public Class mainForm
 
     End Sub
 
-    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.MouseClick, btnCheckout.MouseClick
+    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.MouseClick
 
         If DataGridView1.Rows.Count = 0 Then
 
@@ -520,7 +520,94 @@ Public Class mainForm
 
     End Sub
 
-    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Sub getCart()
+
+        ' cart
+        DataGridView1.Rows.Clear()
+
+        Dim baseid1 As Integer = cartIdByUser
+
+        Try
+            Dim con As New MySqlConnection(cs)
+            con.Open()
+
+            Dim cmd As New MySqlCommand("SELECT cart.cart_id, cart.item_code, cart.item_name, cart.item_price, cart.item_qty, cart.item_subt FROM altertable AS users JOIN table_cart AS cart ON users.id = cart.id WHERE cart.id LIKE @baseid1;", con)
+            cmd.Parameters.AddWithValue("@baseid1", baseid1)
+
+            Dim rdr As MySqlDataReader = cmd.ExecuteReader()
+
+            While rdr.Read()
+
+                Dim itemcode As Integer = rdr.GetInt32(1)
+                Dim itemName As String = rdr.GetString(2)
+                Dim itemPrice As Integer = rdr.GetInt32(3)
+                Dim itemQty As Integer = rdr.GetInt32(4)
+                Dim itemSubt As Integer = rdr.GetInt32(5)
+
+                DataGridView1.Rows.Add(itemcode, itemName, itemPrice, itemQty, itemSubt)
+            End While
+
+            con.Close()
+
+        Catch ex As MySqlException
+            MessageBox.Show("Error: Server is offline", "Error 1", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+
+    End Sub
+
+    Sub getImage()
+
+        ' - fetch id and user image
+
+        connection.Open()
+
+        Dim dt As New DataSet
+
+        Try
+
+            Dim username1 As String = Form1.txtUsername.Text
+
+            Dim sql As String = "SELECT * FROM altertable WHERE username='" & username1 & "'"
+
+            Dim da As New MySqlDataAdapter(sql, connection)
+
+            da.Fill(dt, "altertable")
+
+            myID.DataBindings.Add("text", dt, "altertable.id")
+
+
+            Dim cmd As New MySqlCommand("SELECT * FROM altertable WHERE username='" & username1 & "'", connection)
+
+            Dim dr As MySqlDataReader
+
+            dr = cmd.ExecuteReader()
+
+            If dr.Read() Then
+
+                Dim imagebytes As Byte() = CType(dr("usr_prf"), Byte())
+
+                Using ms As New IO.MemoryStream(imagebytes)
+
+                    RoundedPictureBox1.Image = Image.FromStream(ms)
+
+                    RoundedPictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+
+                End Using
+
+            End If
+
+            connection.Close()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
+
+    End Sub
+
+    Sub orderFunction()
 
         '
         conChecker()
@@ -568,6 +655,12 @@ Public Class mainForm
             End
 
         End Try
+
+    End Sub
+
+    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
         ' mybase funcions
         ' - controls behavior if unSession is blank and isLoginSession is false
@@ -622,6 +715,12 @@ Public Class mainForm
 
         Load_Items()
 
+        getCart()
+
+        getImage()
+
+        orderFunction()
+
         ' - ...
 
 
@@ -652,91 +751,9 @@ Public Class mainForm
 
         ToolTip1.SetToolTip(btnSettings, "Settings")
 
-        ' - ...
-        Dim checkoutFuck As New checkoutItems()
-
-        ' - fetch id and user image
-
-        connection.Open()
-
-        Dim dt As New DataSet
-
-        Try
-
-            Dim username1 As String = Form1.txtUsername.Text
-
-            Dim sql As String = "SELECT * FROM altertable WHERE username='" & username1 & "'"
-
-            Dim da As New MySqlDataAdapter(sql, connection)
-
-            da.Fill(dt, "altertable")
-
-            myID.DataBindings.Add("text", dt, "altertable.id")
-
-
-            Dim cmd As New MySqlCommand("SELECT * FROM altertable WHERE username='" & username1 & "'", connection)
-
-            Dim dr As MySqlDataReader
-
-            dr = cmd.ExecuteReader()
-
-            If dr.Read() Then
-
-                Dim imagebytes As Byte() = CType(dr("usr_prf"), Byte())
-
-                Using ms As New IO.MemoryStream(imagebytes)
-
-                    RoundedPictureBox1.Image = Image.FromStream(ms)
-
-                    RoundedPictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-
-                End Using
-
-            End If
-
-            connection.Close()
-
-        Catch ex As Exception
-
-            MsgBox(ex.Message)
-
-        End Try
-
-        ' cart
-        DataGridView1.Rows.Clear()
-
-        Dim baseid1 As Integer = cartIdByUser
-
-        Try
-            Dim con As New MySqlConnection(cs)
-            con.Open()
-
-            Dim cmd As New MySqlCommand("SELECT cart.cart_id, cart.item_code, cart.item_name, cart.item_price, cart.item_qty, cart.item_subt FROM altertable AS users JOIN table_cart AS cart ON users.id = cart.id WHERE cart.id LIKE @baseid1;", con)
-            cmd.Parameters.AddWithValue("@baseid1", baseid1)
-
-            Dim rdr As MySqlDataReader = cmd.ExecuteReader()
-
-            While rdr.Read()
-
-                Dim itemcode As Integer = rdr.GetInt32(1)
-                Dim itemName As String = rdr.GetString(2)
-                Dim itemPrice As Integer = rdr.GetInt32(3)
-                Dim itemQty As Integer = rdr.GetInt32(4)
-                Dim itemSubt As Integer = rdr.GetInt32(5)
-
-                DataGridView1.Rows.Add(itemcode, itemName, itemPrice, itemQty, itemSubt)
-            End While
-
-            con.Close()
-
-        Catch ex As MySqlException
-            MessageBox.Show("Error: Server is offline", "Error 1", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-
-
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.MouseClick, btnClear.MouseClick
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.MouseClick
 
         If DataGridView1.Rows.Count = 0 Then
 
@@ -762,7 +779,7 @@ Public Class mainForm
 
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.MouseClick, btnDelete.MouseClick
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.MouseClick
 
         If DataGridView1.Rows.Count = 0 Then
 
@@ -885,7 +902,7 @@ Public Class mainForm
         navBarCallMain.revoke2(Me)
     End Sub
 
-    Private Sub btnDeliver_MouseClick(sender As Object, e As MouseEventArgs) Handles btnDeliver.MouseClick, btnDeliver.MouseClick
+    Private Sub btnDeliver_MouseClick(sender As Object, e As MouseEventArgs) Handles btnDeliver.MouseClick
 
         Dim fname As String = txtReceiver.Text
 
@@ -935,7 +952,7 @@ Public Class mainForm
 
                             Else
 
-                                Dim update_command As New MySqlCommand("UPDATE `altertable` SET `firstname`=@fname, `address`=@address, `contact`=@ucontact, `email`=@uemail WHERE `id`=@uID", connection)
+                                Dim update_command As New MySqlCommand("UPDATE `altertable` SET `fname`=@fname, `address`=@address, `contact`=@ucontact, `email`=@uemail WHERE `id`=@uID", connection)
 
                                 update_command.Parameters.Add("@uID", MySqlDbType.Int32).Value = uID
 

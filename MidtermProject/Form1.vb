@@ -66,7 +66,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        form1Functions.myBaseLoad(Me)
+        txtUsername.Focus()
 
         Label3.Text = String.Empty
 
@@ -77,19 +77,226 @@ Public Class Form1
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        form1Functions.submitLogin(Me)
+        Dim username = txtUsername.Text
+        Dim password = txtPassword.Text
+
+        Dim cmd As New MySqlCommand("SELECT `username`, `password`  FROM `altertable` WHERE `username` = @username AND `password` = @pass", conString.getConnection)
+
+        If txtUsername.Text = String.Empty And txtPassword.Text = String.Empty Then
+
+            Label3.ForeColor = Color.Red
+
+            Label3.Text = "All fields are empty."
+
+            MsgBox("Please input some credentials", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+
+        ElseIf password.Trim = "" Or password.Trim.ToLower = "password" Then
+
+            MsgBox("Password is missing, please input something.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+        Else
+
+            Try
+
+                cmd.Parameters.Add("@username", MySqlDbType.VarChar).Value = username
+                cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password
+
+                da.SelectCommand = cmd
+                da.Fill(dt)
+                da.SelectCommand.CommandTimeout = 750
+
+                If dt.Rows.Count = 0 Then
+
+                    MsgBox("The username (" + username + "), is not associated to any account registered to the database.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login Error")
+
+                Else
+                    If dt.Rows.Count > 0 Then
+
+                        Label3.ForeColor = Color.Green
+
+                        Label3.Text = "Account found!"
+
+                        MsgBox("Welcome back, " + username, MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+
+                        lobby.isLoginSession = True
+
+                        lobby.unSession = username
+
+                        lobby.Show()
+
+                        Close()
+
+                    Else
+
+                        lobby.isLoginSession = False
+
+                        MsgBox("This username or/and password doesn't exists." + Environment.NewLine + Environment.NewLine + "(con_close)", MsgBoxStyle.Exclamation, "Sign-in error")
+
+                    End If
+
+                End If
+
+            Catch ex As MySqlException
+
+                MsgBox("Connection to localhost server is not established/open. Please check and try again.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login error - host offline")
+
+            End Try
+
+        End If
 
     End Sub
 
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
 
-        form1Functions.usernameKeyEvent(Me, e)
+        If e.KeyCode = Keys.Enter Then
+
+            Dim username = txtUsername.Text
+            Dim password = txtPassword.Text
+
+            Dim cmd As New MySqlCommand("SELECT `username`, `password` FROM `altertable` WHERE `username` = @username AND `password` = @pass", conString.getConnection)
+
+            If txtUsername.Text = String.Empty And txtPassword.Text = String.Empty Then
+
+                Label3.ForeColor = Color.Red
+                Label3.Text = "All fields are empty."
+
+                MsgBox("Please input some credentials", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+
+
+            ElseIf password.Trim = "" Or password.Trim.ToLower = "password" Then
+
+                MsgBox("Password is missing, please input something.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+
+            Else
+
+                Try
+
+                    cmd.Parameters.Add("@username", MySqlDbType.VarChar).Value = username
+                    cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password
+
+                    da.SelectCommand = cmd
+                    da.Fill(dt)
+                    da.SelectCommand.CommandTimeout = 750
+
+                    If dt.Rows.Count = 0 Then
+
+                        MsgBox("The username (" + username + "), is not associated to any account registered to the database.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login Error")
+                    Else
+                        If dt.Rows.Count > 0 Then
+
+                            Label3.ForeColor = Color.Green
+
+                            Label3.Text = "Account found!"
+
+                            MsgBox("Welcome back, " + username, MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+
+                            lobby.isLoginSession = True
+
+                            lobby.unSession = username
+
+                            lobby.Show()
+
+                            Close()
+
+                        Else
+
+                            lobby.isLoginSession = False
+
+                            MsgBox("This username or/and password doesn't exists." + Environment.NewLine + Environment.NewLine + "(con_close)", MsgBoxStyle.Exclamation, "Sign-in error")
+
+                        End If
+
+                    End If
+
+                Catch ex As MySqlException
+
+                    MsgBox("Connection to localhost server is not established/open. Please check and try again.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login error - host offline")
+
+                End Try
+
+            End If
+
+        End If
+
 
     End Sub
 
     Private Sub TextBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
 
-        form1Functions.passwordKeyEvent(Me, e)
+        If e.KeyCode = Keys.Enter Then
+
+            Dim username = txtUsername.Text
+            Dim password = txtPassword.Text
+
+            Dim cmd As New MySqlCommand("SELECT `username`, `password` FROM `altertable` WHERE `username` = @username AND `password` = @pass", conString.getConnection)
+
+            If txtUsername.Text = String.Empty And txtPassword.Text = String.Empty Then
+
+                Label3.ForeColor = Color.Red
+                Label3.Text = "All fields are empty."
+
+                MsgBox("Please input some credentials", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+
+
+            ElseIf password.Trim = "" Or password.Trim.ToLower = "password" Then
+
+                MsgBox("Password is missing, please input something.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+
+            Else
+
+                Try
+
+                    cmd.Parameters.Add("@username", MySqlDbType.VarChar).Value = username
+                    cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password
+
+                    da.SelectCommand = cmd
+                    da.Fill(dt)
+                    da.SelectCommand.CommandTimeout = 750
+
+                    If dt.Rows.Count = 0 Then
+
+                        MsgBox("The username (" + username + "), is not associated to any account registered to the database.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login Error")
+                    Else
+                        If dt.Rows.Count > 0 Then
+
+                            Label3.ForeColor = Color.Green
+
+                            Label3.Text = "Account found!"
+
+                            MsgBox("Welcome back, " + username, MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+
+                            lobby.isLoginSession = True
+
+                            lobby.unSession = username
+
+                            lobby.Show()
+
+                            Close()
+
+                        Else
+
+                            lobby.isLoginSession = False
+
+                            MsgBox("This username or/and password doesn't exists." + Environment.NewLine + Environment.NewLine + "(con_close)", MsgBoxStyle.Exclamation, "Sign-in error")
+
+                        End If
+
+                    End If
+
+                Catch ex As MySqlException
+
+                    MsgBox("Connection to localhost server is not established/open. Please check and try again.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Login error - host offline")
+
+                End Try
+
+            End If
+
+        End If
 
     End Sub
 
