@@ -8,7 +8,7 @@
 > This update include modification of functionalities across the project.
 
 > [!WARNING]
-> PHP 50.00 for the whole project reference. May GCash ako, pm nyo na lang ako sa Messenger. HAHAHAHHAHAA
+> THE COMMENT IN UPDATECREDMAIN CLASS FILE IS INCORRECT. THE COMMENT IN MAINFORM IS MEANT FOR UPDATECREDMAIN, AND THE COMMENT FOR UPDATECREDMAIN IS FOR MAINFORM.
 
 
 ## Update changelog as of 07/04/2024
@@ -34,12 +34,14 @@ mainForm Changes
 
 ### mainForm (Settings)
 
-- Added new feature 'Setup shipping details'
-> [x] This feature allow the user to setup once their shipping detail and never input it again and again when buying.
+- [x] Added new feature 'Setup shipping details'
+> This feature allow the user to setup once their shipping detail and never input it again and again when buying.
 
-- Fixed all text fields abnormal functionalities
-> [x] Throughout the making and enahcement, the functionalities of the text fields is behaving in not normal or proper condition. This issues are already fixed now.
+- [x] Fixed all text fields abnormal functionalities
+>  Throughout the making and enahcement, the functionalities of the text fields is behaving in not normal or proper condition. This issues are already fixed now.
 
+- [x] Added restriction for user profile image in settings
+> This implementation will only occur when user is not signed-in or not picking/selecting image. The button will automatically change the boolean value when its condition is met.
 
 ### Form1 (Login)
 
@@ -57,6 +59,10 @@ mainForm Changes
 - [x] Code functionalities alignment with the new feature
 - [x] Fixed code where computation of total cost is incorrect
 - [x] Fixed bug in 'Return to merchant' button where it popping up two message box
+
+### updateCredMain
+
+- [x] Fix some code in 'submit' sub.
 
 ### Assets
 
